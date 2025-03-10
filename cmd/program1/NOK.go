@@ -7,6 +7,7 @@ import (
 	"sort"
 )
 
+// Запись всех возможных вариантов кратного для каждого элемента
 func checkMultiplicity(number int) map[int]int {
 	checkMap := make(map[int]int)
 	addVar := number
@@ -20,6 +21,7 @@ func checkMultiplicity(number int) map[int]int {
 	return checkMap
 }
 
+// Поиск наименьшего общего кратного
 func findNumber(a, b, c map[int]int) int {
 
 	var keySlice []int
@@ -34,6 +36,8 @@ func findNumber(a, b, c map[int]int) int {
 	return keySlice[0]
 }
 
+
+// Проверка ответа пользователя
 func checkAnswer(answer, checkAnswer int) bool {
 	if answer == checkAnswer {
 		return true
@@ -43,6 +47,7 @@ func checkAnswer(answer, checkAnswer int) bool {
 
 }
 
+// Основной алгоритм работы
 func gameMain(name string) bool {
 
 	value1 := 1 + rand.Intn(10)
