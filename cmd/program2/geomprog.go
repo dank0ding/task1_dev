@@ -7,6 +7,7 @@ import (
 	"strconv"
 )
 
+// Генерация массива прогрессии
 func sliceGeneration() []int {
 	length := 5 + rand.Intn(5)
 	var valueSlice []int
@@ -20,6 +21,7 @@ func sliceGeneration() []int {
 	return valueSlice
 }
 
+// Основной алгоритм задачи
 func taskGeneration(name string) bool {
 	taskSlice := sliceGeneration()
 
